@@ -61,45 +61,59 @@ export default function Home() {
                         height={photo.height || 600}
                         layout="intrinsic"
                         objectFit="contain"
-                        className="rounded-lg"
+                        className="z`"
                     />
                 </div>
             </div>
         );
     };
 
-    return (  
-        <div className="min-h-screen" style={{ opacity: pageOpacity, transition: 'opacity 2000ms ease-in-out' }}>
+    return (
+        <div className="min-h-screen" style={{ opacity: pageOpacity, transition: 'opacity 500ms ease-in-out' }}>
             <Head>
                 <title>Erwan Mouton</title>
-                <meta name="description" content="Photographer based in Paris" />
+                <meta name="description" content="photographer based in Paris" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className="flex flex-col justify-center text-center h-screen">
-            <header className="sticky justify-between w-full">
-                <a href="#" className="text-white hover:text-gray-300 mr-5">Projects</a>
-                <a href="#" className="text-white hover:text-gray-300 ">Contact</a>
-            </header>
+                <header className="sticky justify-between w-full">
+                    <a href="#pics"  className="text-white hover:text-gray-300 mr-5">pics</a>
+                    <a href="#info" className="text-white hover:text-gray-300 ">info</a>
+                </header>
 
-            {/* Section pour le nom et le prénom */}
-            <section className="flex flex-col items-center justify-center text-center">
-                <h1 className="text-6xl font-bold text-white">Erwan Mouton</h1>
-                <p className="mt-3 text-white">Photographer, based in Paris</p>
-                <ParticlesComponent id="particles" />
-            </section>
+                {/* Section pour le nom et le prénom */}
+                <section className="flex flex-col items-center justify-center text-center">
+                    <h1 className="text-6xl font-bold text-white">ERWAN MOUTON</h1>
+                    <p className="mt-3 text-white">Photographer, based in Paris</p>
+                    <ParticlesComponent id="particles" />
+                </section>
             </div>
+
+            {/* Nouvelle section avec une petite description */}
+            <section id="info" className="w-full bg-black py-4">
+                <div className="flex flex-col items-center justify-center text-center container mx-auto mt-10 mb-10">
+                    <h2 className="text-3xl font-bold text-white mb-4">Lorem ipsum</h2>
+                    <p className="text-white text-lg italic">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec nunc non sem maximus rhoncus in in nulla. Integer vitae ante leo. Suspendisse malesuada eget eros vel malesuada. Aenean ut vehicula risus, ut efficitur elit. In ullamcorper eget turpis et posuere. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam ipsum arcu, pellentesque a laoreet eget, elementum nec nulla. 
+                    </p>
+                    <p className="text-white text-lg italic mt-10">
+                        @ERWAN! 🐑 2024
+                    </p>
+                </div>
+            </section>
+
             {/* Section pour la galerie de photos */}
-            <section className="w-full bg-black py-4 border-t border-gray-800" style={{ opacity: pageOpacity, transition: 'opacity 500ms ease-in-out' }}>
-                <div className="container mx-auto ">
+            <section id="pics" className="w-full bg-black py-4 border-t border-gray-800" style={{ opacity: pageOpacity, transition: 'opacity 500ms ease-in-out' }}>
+                <div className="container mx-auto mt-10 mb-10">
                     <div style={{ columnCount: 5, columnGap: '1rem' }}>
                         {photos.map((photo) => (
-                            <div
+                            <div 
                                 key={photo.id}
                                 style={{ marginBottom: '1rem' }}
                                 onClick={() => openModal(photo)}
                                 className="transition-transform duration-300 ease-in-out hover:scale-105"
                             >
-                                <Image
+                                <Image 
                                     src={photo.src}
                                     alt={photo.alt}
                                     width={200}
@@ -110,6 +124,7 @@ export default function Home() {
                                 />
                             </div>
                         ))}
+                        <p ></p>
                     </div>
                 </div>
             </section>
