@@ -84,7 +84,7 @@ export default function Home() {
                 {/* Section pour le nom et le prénom */}
                 <section className="flex flex-col items-center justify-center text-center">
                     <h1 className="text-6xl font-bold text-white">ERWAN MOUTON</h1>
-                    <p className="mt-3 text-white">Photographer, based in Paris</p>
+                    <p className="mt-3 text-white">photographer, based in Paris</p>
                     <ParticlesComponent id="particles" />
                 </section>
             </div>
