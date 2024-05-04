@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import 'tailwindcss/tailwind.css';
-import ParticlesComponent from '../components/Particles';
+import ParticlesComponent from '../components/particles.js';
 import photos from '../components/photos';
 
 export default function Home() {
