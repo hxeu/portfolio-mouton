@@ -67,6 +67,14 @@ export default function Home() {
         );
     };
 
+    const handleClick = (event, targetId) => {
+        event.preventDefault();
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <div className="min-h-screen" style={{ opacity: pageOpacity, transition: 'opacity 500ms ease-in-out' }}>
             <Head>
@@ -76,8 +84,8 @@ export default function Home() {
             </Head>
             <div className="flex flex-col justify-center text-center h-screen">
                 <header className="sticky justify-between w-full">
-                    <a href="#pics"  className="text-white hover:text-gray-300 mr-5">pics</a>
-                    <a href="#info" className="text-white hover:text-gray-300 ">info</a>
+                    <a href="#pics" onClick={(e) => handleClick(e, 'pics')} className="text-white hover:text-gray-300 mr-5">pics</a>
+                    <a href="#info" onClick={(e) => handleClick(e, 'info')} className="text-white hover:text-gray-300 ">info</a>
                 </header>
 
                 {/* Section pour le nom et le prénom */}
