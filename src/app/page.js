@@ -202,7 +202,7 @@ export default function Home() {
             </section>
 
             {/* Section description */}
-            <section id="info" className="w-full bg-black py-4">
+            <section id="info" className="w-full py-4">
                 <div className="flex flex-col items-center justify-center text-center container mx-auto mt-10 mb-10">
                     <h2 className="text-3xl font-bold text-white mb-4">Lorem ipsum</h2>
                     <p className="text-white text-lg italic">
