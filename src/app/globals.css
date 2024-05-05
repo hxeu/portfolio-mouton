@@ -22,3 +22,23 @@
   position: relative;
 }
 
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+      visibility: visible;
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
